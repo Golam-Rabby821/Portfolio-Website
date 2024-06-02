@@ -1,0 +1,241 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+/* Navigation Bar */
+
+
+#navbar{
+    width: 100%;
+    height: 70px;
+    background-color: rgb(255,225,118);
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#navbar ul{
+    list-style-type: none;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbar ul li>a{
+   font-size: 1.3rem;
+   font-weight: bold;
+   color: black;
+   text-decoration: none;
+   padding: 20px;
+}
+
+#navbar ul li>a:hover{
+    background-color: rgb(93,52,41);
+    color: white;
+}
+
+/* Welcome Section */
+
+#welcome-section{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(93,52,41);
+    color: white;
+}
+
+#welcome-section h1{
+    font-size: 2.8rem;
+    font-weight: bold;
+    padding-bottom: 10px;
+    
+}
+
+#welcome-section p{
+    font-size: 1.3rem;
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+/* Projects Section */
+#projects{
+    background-color: hwb(28 40% 3%);
+    color: black;
+    padding-top: 30px;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+#projects h1{
+    font-size: 2rem;
+    padding-bottom: 20px;;
+}
+
+ .project-stack{
+     margin: 20px auto;
+     padding-left:5vw ;
+     padding-right: 5vw;
+     display: grid;
+     text-align: center;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 10vh 5vw;
+     
+ }
+ .project-stack>div{
+  border: 8px solid rgb(93,52,41) ;
+ }
+.project-tile{
+    width: 100%;
+    height: 50vh;
+    background-color: rgb(38,39,41);
+    
+}
+.project-stack h2{
+    border-top: 5px solid rgb(93,52,41) ;
+    height: 6.5vh;
+    background-color: white;
+    padding-top: 7px;
+}
+.project-stack a{
+    
+    text-decoration: none;
+    color: black;
+}
+
+/* Hoover effect Codes*/
+.project-stack a:before {
+    content: "<";
+    margin-right: 10px;
+    display: inline-block;
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+    -moz-transform: translateX(20px);
+    transform: translateX(20px);
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+    transition: transform 0.3s, opacity 0.2s;
+  }
+  
+  .project-stack a:after {
+    content: "/>";
+    margin-left: 10px;
+    display: inline-block;
+    opacity: 0;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+    transition: transform 0.3s, opacity 0.2s;
+    -webkit-transform: translateX(-20px);
+    -moz-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+  
+  .project-stack a:hover:before, .project-stack a:hover:after {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+  
+
+.image{
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}
+/* About Me */
+#about-me{
+    background-color: rgb(255,225,118);
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#about-me div:nth-child(1){
+    padding-bottom: 30px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+#about-me div:nth-child(2){
+                                                           
+    font-size: 1.7rem;
+    
+}
+#about-me div:nth-child(2) a{
+    text-decoration: none;
+    padding-right: 10px;
+    color: black;
+}
+
+/* Footer */
+
+footer{
+    height: 15vh;
+    background-color: rgb(48,62,64);
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+}
+
+ @media only screen and (max-width: 650px){
+     
+     .project-stack{
+         grid-template-columns: repeat(1, 1fr);
+         width: 90%;
+         padding-left: 10vw;
+     }
+    #projects h1{
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+   
+ }
+
+ @media only screen and (max-width: 530px){
+     
+     #welcome-section h1{
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 10px;
+    
+}
+
+#welcome-section p{
+    font-size: 1.1rem;
+    font-style: italic;
+    font-weight: bold;
+}
+
+     #about-me div:nth-child(1){
+         font-size: 1.5rem;
+     }
+
+     #about-me div:nth-child(2){
+                                                           
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    
+    }
+    #about-me div:nth-child(2) a{
+    text-decoration: none;
+    padding-bottom: 20px;
+    color: black;
+}
+}
