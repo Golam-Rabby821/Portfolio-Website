@@ -182,7 +182,10 @@ body{
     padding-right: 10px;
     color: black;
 }
-
+#about-me a:hover i{
+    background-color: black;
+    color: rgb(255, 240, 187);
+}
 /* Footer */
 
 footer{
